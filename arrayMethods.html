@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();//split gibi düşün
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.join(" * ");//aralarına virgül yerine yıldız ekler
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+        fruits.pop();// son elemanı kaldırır ama yeri durur içi boşalır
+        document.getElementById("demo2").innerHTML = fruits[3];//bu yüzden bu undefined yazdırır
+
+        document.getElementById("demo1").innerHTML = fruits.pop();//mango yazdırır ve mangoyu arrayden çıkartır
+
+        fruits.push("Kiwi");//sona ekler
+
+        document.getElementById("demo1").innerHTML = fruits.push("Kiwi");//5 döndürür yeni array uzunluğu
+
+        fruits.shift();//ilk elementi atar hepsini 1 sola kaydırır
+
+        document.getElementById("demo2").innerHTML = fruits.shift();//ilk elementi yazdırır
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.unshift("Lemon");//en başa ekler hepsi 1 sağa kayar
+
+        document.getElementById("demo1").innerHTML = fruits.unshift("Lemon");//yeni array lengthi döner
+
+        fruits[fruits.length] = "Kiwi";//easy way to add element at the end of the array
+
+        delete fruits[0];//istediğin yeri silersin ama orda boşluk kalır
+
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys); //iki arrayi ekledi arka arkaya üç tane de ekleyebilirsin(myBoys,a)böyle böyle eklenir
+
+        fruits.splice(2, 0, "Lemon", "Kiwi");//istediğin yere eleman ekleme 2 nereye ekleyeceğin 0 ise kaç element kaldıracağın
+        fruits.splice(0, 1);//spliceı eleman kaldırmak için de kullanabilirsin boşluk bırakmadan
+
+        const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const citrus = fruits.slice(1);//1den öncesini siler ama aynı arrayde olmaz yeni arraye aktarmak lazım
+        const citrus = fruits.slice(1,3);//1 ve 2 yi alır başka arraye atar 
+
+    
+    </script>
+</body>
+</html>

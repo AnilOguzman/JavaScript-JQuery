@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body style="background-color:gray;">
+    <h1 style="text-align:center;"><img src="Resimler/hesap.png" style="width:3%;">JAVASCRIPT HESAP MAKİNESİ</h1>
+    <div style="margin-left:800px ;">
+        <label>1.sayı</label> <br>
+        <input type="text" id="sayi1"><br>
+        <label>2.sayı</label> <br>
+        <input type="text" id="sayi2"> <br>
+        <p>Yapacağınız işlemi seçiniz</p>
+        <button type="button" onclick="toplama()">toplama+</button>
+        <button type="button" onclick="çıkarma()">çıkarma-</button>
+        <button type="button" onclick="çarpma()">çarpma*</button>
+        <button type="button" onclick="bölme()">bölme/</button> <br>
+        <label >İşlem sonucu</label><br>
+        <input type="text" id="sonuc">
+
+    </div>
+    <script>
+        function toplama(){
+            var x=parseInt(document.getElementById("sayi1").value);
+            var y=parseInt(document.getElementById("sayi2").value);
+            document.getElementById("sonuc").value=x+y;
+        }
+        function çıkarma(){
+            var x=parseInt(document.getElementById("sayi1").value);
+            var y=parseInt(document.getElementById("sayi2").value);
+            document.getElementById("sonuc").value=x-y;
+        }
+        function çarpma(){
+            var x=parseInt(document.getElementById("sayi1").value);
+            var y=parseInt(document.getElementById("sayi2").value);
+            document.getElementById("sonuc").value=x*y;
+        }
+        function bölme(){
+            var x=parseInt(document.getElementById("sayi1").value);
+            var y=parseInt(document.getElementById("sayi2").value);
+            document.getElementById("sonuc").value=x/y;
+        }
+    </script>
+
+</body>
+</html>

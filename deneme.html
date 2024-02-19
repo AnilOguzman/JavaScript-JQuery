@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="deneme"></p>
+    <button onclick="this.innerHTML= Date()">The time is?</button> <!--kendi kendini değiştiriyo this sayesinde-->
+    <script>
+        const obj={name:"Object" };
+        const arr=[1,2,3,4];
+       // document.getElementById("deneme").innerHTML=arr  //arrayi böyle direkt yazdırır
+       /* for(let i=0;i<arr.length;i++){ //alt alta yazdırma
+            document.getElementById("deneme").innerHTML+=arr[i]+"<br>";
+        }*/
+
+      /*  const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  a:this.firstName+this.lastName, //hata verir bu
+  fullName : function() {  //bunu mecburen böyle yapcan firstname+lastname yada this.firstname+this.lastname çalışmıyo
+    return this.firstName + " " + this.lastName;
+  }
+};
+document.getElementById("deneme").innerHTML=person.a;*/
+
+    </script>
+</body>
+</html>

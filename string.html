@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <!--W3'ÜN STRİNG KISMINI OKU-->
+    <p id="demo"></p>
+
+    <button onclick="myFunction()">Try it</button>
+<p id="demo1">Please visit Microsoft!</p>
+
+
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length;
+
+        let x = "100";
+        let y = "10";   
+        let z = x / y; //x+y olsa çalışmazdı ama bunun sonucu 10 u verir
+
+        document.getElementById("demo").innerHTML = 100 / "10";//10 sonucunu verir
+
+        document.getElementById("demo").innerHTML = "Hello \ 
+Dolly!";
+ /* backslash koyduk aşağı kaydığında normal yanyana yazmaya devam etti \ bunu silince hata veriyo*/
+    
+        let text1 = "Apple, Banana, Kiwi";
+        let part = text.slice(7, 13); //7DEN 13E KADAR
+        let part1 = text.slice(7) //7DEN SONA KADAR
+        let part2 = text.slice(-12);//TERSTEN -1 OLARAK SAYMAYA  BAŞLAR -12 DEN -1E DOĞRU YANİ SONA DOĞRU YAZDIRIR
+
+
+        function myFunction() {
+            let text = document.getElementById("demo1").innerHTML; /*text'e demonun içeriğini kaydettik*/
+            document.getElementById("demo1").innerHTML =
+            text.replace("Microsoft","W3Schools");
+            text.replace(/Microsoft/i,"W3Schools"); //insensitive yapıyo byük küçük harf farketmiyo 
+            text.replace(/Microsoft/g,"W3Schools"); //genel tüm microsoftları değiştiriyo
+            text = text.replaceAll("Cats","Dogs");//tüm Catsleri Dogslarla değiştirir
+}               
+
+                let text1 = "Hello World!";
+                let text2 = text1.toUpperCase();
+                let text2 = text1.toLowerCase();
+
+                let text1 = "Hello";
+                let text2 = "World";
+                let text3 = text1.concat(" ", text2);
+
+                let text1 = "      Hello World!      ";
+                let text2 = text1.trim();
+                let text2 = text1.trimStart(); //sadece baştakileri kaldırır
+                let text2 = text1.trimEnd() // sadece sondakiler;
+
+                let text = "5";
+                let padded = text.padStart(4,"x");//başa 4 tane x ekler
+                let padded = text.padEnd(4,"x");//sona 4 tane x ekler
+
+                let text = "a,b,c,d,e,f";
+                const myArray = text.split(","); //texti arraye dönüştürdü
+                document.getElementById("demo").innerHTML = myArray[1];
+    </script>
+</body>
+</html>

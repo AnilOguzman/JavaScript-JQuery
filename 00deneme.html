@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="deneme"></p>
+    ŞİFRE:<input type="password" id="sifre">
+    <button id="button" onclick="bas()">BAS</button>
+    <script>
+       
+        
+       function bas(){
+        var str="ahmet"
+       var sifre=document.getElementById("sifre").value;
+       if(str.length>sifre.length || str.length<sifre.length){
+        alert(false);
+       }
+      else{
+        for(let a=0;a<sifre.length;a++){
+            var flag=true;
+            if(str[a]==sifre[a]){
+
+            }
+            else{
+                flag=false;
+                break;
+            }
+       }
+       alert(flag)
+      } 
+       }
+       
+    </script>
+</body>
+</html>

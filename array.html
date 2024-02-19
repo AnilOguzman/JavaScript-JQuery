@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars; //elemanların hepsini yazdırma
+
+        const person = ["John", "Doe", 46];
+        document.getElementById("demo").innerHTML = person[0];//hem sayı hem string olabiliyo arrayde
+
+        myArray[0] = Date.now; //array içinde obje
+        myArray[1] = myFunction; //array içinde function
+        myArray[2] = myCars; // array içinde array
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"]; // liste olarak yazdırma
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"]; //for-each ile liste olarak yazdırma
+        let text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+        function myFunction(value) {
+        text += "<li>" + value + "</li>";
+        }
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits.push("Lemon"); //eleman ekleme
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits[6] = "Lemon";  // Creates undefined "holes" in fruits
+
+        var fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits instanceof Array; //true döndürür
+
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();//alfabeye göre sıralar
+        fruits.reverse();//tersten yazdırır
+
+        const points = [40, 100, 1, 5, 25, 10]; // sayılarda küçükten büyüğe yazdırma
+        document.getElementById("demo1").innerHTML = points;  
+        points.sort(function(a, b){return a - b}); //sayılarda ilk basamağa baktığı için yanlış sıralama yapıyo o yüzden böyle yaptık
+        document.getElementById("demo2").innerHTML = points; 
+
+        const points = [40, 100, 1, 5, 25, 10];//sorting randomly
+        document.getElementById("demo").innerHTML = points;  
+        function myFunction() {
+        points.sort(function(){return 0.5 - Math.random()});
+        document.getElementById("demo").innerHTML = points;
+
+        const points = [40, 100, 1, 5, 25, 10]; //math.max ve min kullanımı arraylerde
+        document.getElementById("demo").innerHTML = myArrayMax(points);
+        function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+}
+
+    </script>
+</body>
+</html>

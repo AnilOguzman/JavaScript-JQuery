@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button>Start Animation</button>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+    <script> 
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("div").animate({left: '500px'});
+          });
+        });
+
+        $("button").click(function(){
+            $("div").animate({
+                left: '250px',
+                opacity: '0.5',
+                height: '150px',
+                width: '150px'
+            });
+            }); 
+
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                    });
+                });
+                });
+
+                $(document).ready(function(){
+                    $("button").click(function(){
+                        $("div").animate({
+                        height: 'toggle'  //açıp kapamaya yarıyo
+                        });
+                    });
+                    });
+
+                    $(document).ready(function(){
+                        $("button").click(function(){  //birden çok animasyon kullanma
+                            var div = $("div");
+                            div.animate({height: '300px', opacity: '0.4'}, "slow");
+                            div.animate({width: '300px', opacity: '0.8'}, "slow");
+                            div.animate({height: '100px', opacity: '0.4'}, "slow");
+                            div.animate({width: '100px', opacity: '0.8'}, "slow");
+                        });
+                        });
+
+        </script> 
+</body>
+</html>

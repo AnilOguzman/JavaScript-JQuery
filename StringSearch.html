@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Please locate where 'locate' occurs!";
+        str.indexOf("locate"); //çıktısı 7 olur çünkü 7den başlıyo kelime
+        text.indexOf("locate", 15);//aramaya nerden başlayacağımızı belirtir 2. index
+        str.search("locate");//7 döndürür
+
+        let text = "The rain in SPAIN stays mainly in the plain";
+        const myArr = text.match("ain");// bir kere eşleşir ve ain kelimesini arraye atar
+        document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+
+        let text = "The rain in spain stays mainly in the plain"; 
+        const myArr = text.match(/ain/g); //genel arama yapar kaç tane varsa o kadar ain atar arraye
+        document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+        text.match(/ain/gi)//insensitive global arama yapar
+    
+    </script>
+</body>
+</html>

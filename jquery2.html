@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style> 
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #e5eecc;
+          border: solid 1px #c3c3c3;
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+</head>
+<body>
+    <p>deneme</p>
+    <button>GİZLE/GÖSTER</button>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+    <script>
+         $(document).ready(function(){    
+             $("p").on({
+                 mouseenter: function(){
+                 $(this).hide();
+                 },  
+                 mouseleave: function(){
+                 $(this).show();
+                 }, 
+                 click: function(){
+                 $(this).css("background-color", "yellow");
+                 }  
+             });
+             }); 
+ 
+             $(document).ready(function(){  //w3 te çalışıyo
+                 $("button").click(function(){
+                     $("p").toggle(); // togle hem show hem hide görevi var toggle(speed,callback);
+                 });                    
+             });
+
+             $(document).ready(function(){
+                $("button").click(function(){   // görünmeyeni içeri alıyo
+                    $("#div1").fadeIn();   //türkçesi karartmak
+                    $("#div2").fadeIn("slow");
+                    $("#div3").fadeIn(5000);
+                });
+                });
+
+                $(document).ready(function(){
+                    $("button").click(function(){ //fadeout görüneni gönderiyo
+                        $("#div1").fadeOut();
+                        $("#div2").fadeOut("slow");
+                        $("#div3").fadeOut(3000);
+                    });
+                    });
+                
+                    $(document).ready(function(){   
+                        $("button").click(function(){
+                            $("#div1").fadeToggle();  // hem fadein hem fadeout görevi görüyo
+                            $("#div2").fadeToggle("slow");
+                            $("#div3").fadeToggle(3000);
+                        });
+                        });
+
+                        $(document).ready(function(){ //slide up ve down görevi yapıyo 
+                            $("#flip").click(function(){
+                                $("#panel").slideToggle("slow");
+                            });
+                            });
+</script>
+</head>
+<body>
+     </script>
+</body>
+</html>

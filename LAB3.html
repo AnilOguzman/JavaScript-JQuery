@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td{
+            border: 1px,solid,black;
+        }
+        th{
+            background-color: yellow;
+        }
+        
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body >
+    <div style="margin-left: 700px;">
+        
+    </div>
+    <div style="text-align:center;">
+        <label>NUMBER:</label>
+        <input type="text" id="ad">
+        <label>NAME:</label>
+        <input type="text" id="soyad">
+        <label>FİRST:</label>
+        <input type="text" id="tc">
+        <label>SECOND:</label>
+        <input type="text" id="second">
+        <label>FINAL:</label>
+        <input type="text" id="final">
+        <button type="button" onclick="myFunction()" id="button">Tabloya Ekle</button>
+    </div>
+    <div>
+        <table id="table"  style="width:100%; margin-top: 20px; ">
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>First</th>
+                <th>Second</th>
+                <th>Final</th>
+                <th>Total</th>
+            </tr>
+        </table>
+        <p id="tek">Ortalama:</p>
+        <p id="çift">En Yüksek:</p>
+    </div>
+    <script>
+        function myFunction(){
+            var ad=document.getElementById("ad").value;
+            var soyad=document.getElementById("soyad").value;
+            var tc=parseInt(document.getElementById("tc").value);
+            var second=parseInt(document.getElementById("second").value);
+            var final=parseInt(document.getElementById("final").value);
+            
+            
+            var table=document.getElementById("table");
+            var row=table.insertRow();
+            var cell1=row.insertCell(0);
+            var cell2=row.insertCell(1);
+            var cell3=row.insertCell(2);
+            var cell4=row.insertCell(3);
+            var cell5=row.insertCell(4);
+            var cell6=row.insertCell(5);
+
+            cell1.innerHTML=ad;
+            cell2.innerHTML=soyad;
+            cell3.innerHTML=tc;
+            cell4.innerHTML=second;
+            cell5.innerHTML=final;     
+            cell6.innerHTML=tc+second+final;
+           
+           
+            $(document).ready(function(){
+        $("button").click(function(){
+            if(tc+final+second>60){
+                        $(cell6).css("background-color", "green");
+                    }
+                    else{
+                        $(cell6).css("background-color", "red");
+                    }   
+        });
+        }); 
+
+        document.getElementById("tek").innerHTML="Ortalama:"+(parseInt(document.getElementById("second").value)+parseInt(document.getElementById("tc").value)+parseInt(document.getElementById("final").value))/3;
+        
+        var Total=parseInt(document.getElementById("tc").value)+parseInt(document.getElementById("second").value)+parseInt(document.getElementById("final").value);
+        var x=Total; 
+        if(Total>x){
+            x=Total;
+        }
+        document.getElementById("çift").innerHTML="En yüksek:"+x;
+        }
+     
+        
+    </script>
+</html>

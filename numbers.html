@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    
+    <script>
+        let y = new Number(123); //obje haline geldi
+        
+        let x=10
+        document.getElementById("demo").innerHTML=x.toString()
+
+        document.getElementById("demo").innerHTML = 
+        parseInt("-10") + "<br>" +
+        parseInt("-10.33") + "<br>" +
+        parseInt("10") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("10 6") + "<br>" +  
+        parseInt("10 years") + "<br>" +  
+        parseInt("years 10"); 
+
+        document.getElementById("demo").innerHTML = 
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("10 6") + "<br>" +  
+        parseFloat("10 years") + "<br>" +
+        parseFloat("years 10");   
+        
+        Number.isInteger(10.5);
+
+        let x = Number.MAX_VALUE;//constant
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

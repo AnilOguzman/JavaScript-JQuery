@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style> 
+        #panel, #flip {
+          padding: 5px;
+          font-size: 18px;
+          text-align: center;
+          background-color: #555;
+          color: white;
+          border: solid 1px #666;
+          border-radius: 3px;
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+        </head>
+        <body>
+         
+        <button id="stop">Stop sliding</button>
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hello world!</div>
+
+        <p id="p1">jQuery is fun!!</p>
+
+        <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+        <button id="btn1">Show Text</button>
+        <button id="btn2">Show HTML</button>
+
+        <p>Name: <input type="text" id="test" ></p>
+
+        <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+        <script> 
+            $(document).ready(function(){
+              $("#flip").click(function(){
+                $("#panel").slideDown(5000);
+              });
+              $("#stop").click(function(){
+                $("#panel").stop();  // stop u gördük
+              });
+            });
+
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#p1").css("color", "red").slideUp(2000).slideDown(2000); //ard arda yapıyo işlemleri
+                });
+                });
+
+
+                $(document).ready(function(){
+                    $("#btn1").click(function(){
+                        alert("Text: " + $("#test").text()); //texti alıyo
+                    });
+                    $("#btn2").click(function(){
+                        alert("HTML: " + $("#test").html()); // html i alıyo direkt
+                    });
+                    });
+            
+                    $(document).ready(function(){
+                        $("button").click(function(){
+                            alert("Value: " + $("#test").val()); //yazılanı alıyo
+                        });
+                        });
+
+                        $(document).ready(function(){
+                            $("button").click(function(){
+                                alert($("#w3s").attr("id"));  //attribute döndürüyo 
+                            });
+                            });
+            </script>
+        
+        </body>
+</html>

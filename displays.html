@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p> <!--inner html-->
+
+  
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button> <!--tıkladığında tüm html silincek sadece 11 yazcak-->
+
+<button onclick="window.print()">Print this page</button> <!--PRİNTERDAN YAZDIRMAK İÇİN-->
+
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 5; /*inner html*/
+
+document.write(6+5); /*en sona 11 yazacak  */
+/*The document.write() method should only be used for testing.*/
+
+window.alert("ALERT DENEMESİ");
+alert("ALERT DENEMESİ 2");
+</script>
+</body>
+</html>

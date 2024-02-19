@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+
+<p id="test1">This is a <b>bold</b> paragraph.</p>
+<p id="test2">This is another <b>bold</b> paragraph.</p>
+<button id="btn1">Show Old/New Text</button>
+<button id="btn2">Show Old/New HTML</button>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+<button>Change href Value</button>
+
+<p><a href="https://www.w3schools.com" title="some title" id="w3s">W3Schools.com</a></p>
+<button>Change href and title</button>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+<button>Change href Value</button>
+
+
+<script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        $("#test1").text("Hello world!"); // değerleri değiştirdik
+      });
+      $("#btn2").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+      });
+      $("#btn3").click(function(){
+        $("#test3").val("Dolly Duck");
+      });
+    });
+
+
+    $(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text(function(i, origText){   //i yeni girilen origText eskisini tutuyo
+      return "Old text: " + origText + " New text: Hello world! (index: " + i + ")"; 
+    });
+  });
+
+  $("#btn2").click(function(){
+    $("#test2").html(function(i, origText){
+      return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"; 
+    });
+  });
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", "https://www.w3schools.com/jquery/"); // href özelliğinin içeriğini yandaki linkle değiştiriyo
+  });
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr({
+      "href" : "https://www.w3schools.com/jquery/",
+      "title" : "W3Schools jQuery Tutorial"
+    });
+  });
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", function(i, origValue){  //callback function ile de çalışıyo
+      return origValue + "/jquery/"; 
+    });
+  }); 
+});
+    </script>
+</body>
+</html>

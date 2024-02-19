@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:Orange">
+    <div style="margin-left: 700px;">
+        <h1 ><img src="Resimler/addedit.jpg" width="100px"> JAVASCRIPT FORM İŞLEMLERİ</h1>
+    </div>
+    <div style="text-align:center;">
+        <label>AD:</label>
+        <input type="text" id="ad">
+        <label>SOYAD:</label>
+        <input type="text" id="soyad">
+        <label>TC:</label>
+        <input type="text" id="tc">
+        <button type="button" onclick="myFunction()">Tabloya Ekle</button>
+    </div>
+    <div>
+        <table id="table" border="1px" style="width:100%; margin-top: 20px; background-color: gray;">
+            <tr>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>TC</th>
+                <th>İŞLEM</th>
+            </tr>
+        </table>
+    </div>
+   <!-- 
+    <p id="p">tdgrtyy</p>
+    <button onclick="method1()"></button>
+   --> 
+    <script>
+        function myFunction(){
+            var ad=document.getElementById("ad").value;
+            var soyad=document.getElementById("soyad").value;
+            var tc=document.getElementById("tc").value;
+            
+            var table=document.getElementById("table");
+            var row=table.insertRow();
+            var cell1=row.insertCell(0);
+            var cell2=row.insertCell(1);
+            var cell3=row.insertCell(2);
+            var cell4=row.insertCell(3);
+
+            cell1.innerHTML=ad;
+            cell2.innerHTML=soyad;
+            cell3.innerHTML=tc;
+            cell4.innerHTML="<button onclick='RemoveRow(this)'>Remove</button> "
+        }
+        function RemoveRow(myObj){
+            var tablo=document.getElementById("table");
+            tablo.deleteRow(myObj.parentElement.parentElement.rowIndex);
+        }
+       /* var a=2;
+        function method1(){
+            const fruits=["banana","orange","apple"];
+            let type=typeof fruits;
+            a="Test1";
+            method2(a);
+            document.getElementById("p").innerHTML=a;
+        }
+        function method2(){
+            a="Test";
+        }*/
+    </script>
+</body>
+</html>
